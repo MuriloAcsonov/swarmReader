@@ -1,0 +1,182 @@
+
+body{    
+  background-color: #1f1e26;
+  overflow-x: hidden;
+  color: #FFF;
+}
+
+.body-div{    
+    width: 100%;
+    height: 100%;  
+  }
+
+#source{
+    width: 18.5px;
+    height: 18px;    
+    float: right;
+    padding: 21px 51px;
+    margin-right: 5%;    
+    cursor: default;
+    -webkit-user-drag: none;   
+}
+
+.nav-square{
+    width: 60px;
+    height: 100%;
+    float: left; 
+    cursor: default;
+    -webkit-user-drag: none;
+    background-color: #313131;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.nav-square img{
+    width: 50%;    
+    display: block;
+    margin: auto;
+    margin-top: 25%;
+    cursor: default;
+    -webkit-user-drag: none;    
+}
+
+div.selection{
+    -webkit-user-select: none!important;
+}
+
+.nav01{
+    color: #fff;
+    background-color: #0f0e15;
+    width: 100%;
+    height: 60px;
+    line-height: 56px;    
+    position: fixed;  
+    list-style-type: none;
+    left: 0;
+    top: 0;
+    z-index: 3;
+  }
+
+.nav01 .logo-menu{
+  position: absolute;
+  /*color: #5277ca;*/
+  color: #FFF;
+  display: inline-block;
+  font-size: 1.3rem;
+  padding: 2px 111px;
+  left: 0.5rem;
+  cursor: default;
+  text-transform: none;
+  -webkit-user-select: none!important;
+}
+
+.nav01 .ul01{
+  margin: 0;
+  float: right;
+}
+
+.nav01 .ul01 li{
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
+  float: left;
+  padding: 0;
+  list-style-type: none;  
+}
+
+.nav01 .ul01 a{
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
+  font-size: 1rem;
+  color: #fff;
+  display: block;
+  padding: 0 10px;    
+  /*cursor: pointer;*/
+} 
+
+#conteudo{
+  position: relative;
+  top: 60px;
+  height: 100%;
+}
+
+.count{
+  width: 100%;
+  text-align: right;
+  float: right;
+  padding-top: 2%;
+}
+
+.microservices{
+  width: 75%;
+  height: 100%;
+  padding-bottom: 3%;
+  left:10px;
+  padding-top: 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.accordion {
+  background-color: #424247;
+  color: #fff;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  font-family: "Times New Roman", Times, serif;
+  cursor: pointer;
+  padding: 12px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  /*margin-bottom: 20px;*/
+  margin-top: 15px;
+  opacity: 1;
+  -webkit-user-select: none!important;
+}
+
+.accordion:hover {
+  opacity: 0.8;
+}
+
+.panel {
+  padding: 0 18px;
+  -webkit-user-select: none!important;
+  cursor: default;  
+  color: #b7b7b7;
+  background-color: #313038;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.panel .info-right {
+  padding: 2px 10px;  
+  float: left;  
+  -webkit-user-select: none!important;
+  cursor: default;     
+}
+
+.panel .info-left {    
+  padding: 2px 10px;  
+  width: 350px;
+  float: right;  
+  -webkit-user-select: none!important;
+  cursor: default;  
+}
+
+.panel div{
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.1rem;
+}
+
+.panel p{  
+  margin-bottom: 15px;
+}
+
+.accordion:after {
+  content: attr(tag); /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #fff;
+  float: right;
+  margin-left: 5px;
+}

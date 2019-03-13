@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+    
+    <head>
+        <!--<meta http-equiv="refresh" content="3">-->
+
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+        <link rel="icon" href="{{ url_for('static', filename='img/swarm_icon.png') }}" />
+        <script type="text/javascript" src="{{ url_for('static', filename='js/any.js') }}"></script>
+
+        <title>Title</title>       
+
+    </head>
+
+   <body>      
+       <div class="body-div">
+        <nav class="nav01">
+            <div class="nav-square">
+                <img src="{{ url_for('static', filename='img/swarm_icon.png') }}" >
+            </div>
+                <div class="nav-wrapper">
+                  <a class="logo-menu" id="logo-menu" >
+                    Swarm
+                  </a>
+                  <a class="material-icons">
+                  </a>        
+                  <ul class="ul01 right " >
+                    <li>
+                      <div class="selection">
+                        <a>
+                              <img id="source" src="{{ url_for('static', filename='img/source_icon.png') }}">
+                        </a>
+                    </div>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+
+         <div id="conteudo">                   
+
+           <section class="microservices">
+             <div class="count">
+              Services: 137
+            </div>
+            {% for dict in listServices %}
+            {% set serviceName = dict['name'] %}
+            
+            <button class="accordion" tag="run: {{dict[serviceName]['replicas']['running']}}/{{dict[serviceName]['replicas']['total']}}" href="{{ url_for('info') }}">{{serviceName}}</button>
+            
+            {% block panel %}
+            {% endblock %}
+
+            {% endfor %}
+
+          </section>
+
+         </div>
+        </div>
+        
+   </body>
+
+</html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+    
+    <head>
+        <meta http-equiv="refresh" content="3">
+
+        <link rel="stylesheet" type="text/css" href="static/css/style.css">
+        <link rel="icon" href="static/img/swarm_icon.png" />
+        
+        <title>Title</title>       
+
+    </head>
+
+   <body>
+       <div class="body-div">
+        <nav class="nav01">
+            <div class="nav-square">
+                <img src="static/img/swarm_icon.png" >
+            </div>
+                <div class="nav-wrapper">
+                  <a class="logo-menu" id="logo-menu" >
+                    Swarm
+                  </a>
+                  <a class="material-icons">
+                  </a>        
+                  <ul class="ul01 right " >
+                    <li>
+                      <div class="selection">
+                        <a>
+                              <img id="source" src="static/img/source_icon.png">
+                        </a>
+                    </div>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+
+         <div id="conteudo">                   
+
+           <section class="microservices">
+              <div class="count">
+                  Services: 127
+              </div> 
+            <button class="accordion" tag="run 0/0">Service</button>
+            <div class="panel">
+                <div class="info-right">
+                  <p>IMAGE: sla</p>
+                  <p>REPLICAS: 12</p>
+                  <p>RESOURCES</p>
+                  <p>RESERVATION - MEMORYBYTES: 16gb </p>
+                </div>
+                <div class="info-left">
+                  <p>VERSION: production-12v </p>
+                  <p>DEADCONTAINERS: 123 </p>
+                  <br>
+                  <p>LIMIT - MEMORYBYTES: 123456 </p>
+                </div>
+            
+            </div>
+            <script>
+                var acc = document.getElementsByClassName("accordion");
+                var i;
+                
+                for (i = 0; i < acc.length; i++) {
+                  acc[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    if (panel.style.maxHeight){
+                      panel.style.maxHeight = null;
+                    } else {
+                      panel.style.maxHeight = panel.scrollHeight + "px";
+                    } 
+                  });
+                }
+                </script>
+
+          </section>
+
+         </div>
+        </div>
+   </body>
+
+</html>
