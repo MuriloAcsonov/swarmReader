@@ -36,8 +36,8 @@ def dockerReader():
                         except RuntimeError as err:
                                 print(err)
                 
-                print(mListServices)
-                #return mListServices
+                #print(mListServices)
+                return mListServices
 
-if __name__ == "__main__":
-    dockerReader()
+#if __name__ == "__main__":
+ #   dockerReader()
