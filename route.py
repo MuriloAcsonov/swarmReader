@@ -11,7 +11,7 @@ def index():
 
 @app.route('/dash')
 def dash():
-    retorno = dockerReader() 
+    retorno = dockerReader()    
     if retorno is not None:
         return render_template("index.html", listServices=retorno)
     else:

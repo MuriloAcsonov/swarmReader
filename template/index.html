@@ -45,10 +45,22 @@
             {% for dict in listServices %}
             {% set serviceName = dict['name'] %}
             
-            <button class="accordion" tag="run: {{dict[serviceName]['replicas']['running']}}/{{dict[serviceName]['replicas']['total']}}" href="{{ url_for('info') }}">{{serviceName}}</button>
+            <button class="accordion" tag="run: {{dict[serviceName]['replicas']['running']}}/{{dict[serviceName]['replicas']['total']}}" onclick="FillInfo('{{serviceName}}')">{{serviceName}}</button>
             
-            {% block panel %}
-            {% endblock %}
+            <div class="panel">
+              <div class="info-right">
+                <p>IMAGE: sla</p>
+                <p>REPLICAS: 12</p>
+                <p>RESOURCES</p>
+                <p>RESERVATION - MEMORYBYTES: 16gb </p>
+              </div>
+              <div class="info-left">
+                <p>VERSION: production-12v </p>
+                <p>DEADCONTAINERS: 123 </p>
+                <br>
+                <p>LIMIT - MEMORYBYTES: 123456 </p>
+              </div>
+            </div>
 
             {% endfor %}
 
